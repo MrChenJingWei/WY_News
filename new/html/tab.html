@@ -1,0 +1,20 @@
+<header class="nav_p nav_s">
+    <div class="logo_head_s logo_head_p"></div>
+    <div class="person_head_s person_head_p"></div>
+    <div class="down_head_s down_head_p"></div>
+    <div class="emil_head_s emil_head_p"></div>
+</header>
+<div class="tabBar">
+    <div class="tabBar_Border">
+    <div class="tabBar_first_s tabBar_first_p" ng-controller="tabBarController">
+        <ul class="tabBar_first_ul_s tabBar_first_ul_p">
+            <li ng-repeat="listName in tabList.listArr" ui-sref="{{listName.Durl}}">
+                {{listName.demo}}
+            </li>
+        </ul>
+    </div>
+    </div>
+    <div class="tabBar_hidden"></div>
+</div>
+<div class="tabBar_none"></div>
+<ui-view></ui-view>

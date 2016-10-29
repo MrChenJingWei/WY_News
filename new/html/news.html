@@ -1,0 +1,41 @@
+<ul>
+    <li ng-click="newsObj.goToNewsDetail()" ng-repeat="news in newsObj.newList |orderBy:news.priority">
+        <div ng-if="!news.imgextra" class="contentView_p contentView_s">
+            <div class="new_img_p new_img_s"><img ng-src="{{news.imgsrc}}" alt=""></div>
+            <div class="new_content_p new_content_s">
+                <!--标题-->
+                <h3 class="line_height_12">{{news.title}}</h3>
+                <br>
+                <div>
+                    <!--更新时间-->
+                    <span class="left font_A">{{news.ptime}}</span>
+                    <!--评论-->
+                    <div class="right font_A">🀂 {{news.replyCount}}</div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <!--三张图片的-->
+        <div ng-if="news.imgextra" class="contentView_p contentView_s_s">
+            <div class="new_img_p_s new_img_s_s">
+                <img ng-src="{{news.imgsrc}}" alt="">
+                <img ng-src="{{news.imgextra[0].imgsrc}}" alt="">
+                <img ng-src="{{news.imgextra[1].imgsrc}}" alt="">
+            </div>
+            <br>
+            <div class="new_content_p_s new_content_s_s">
+                <!--标题-->
+                <h3 class="line_height_12">{{news.title}}</h3>
+                <br>
+                <div>
+                    <!--更新时间-->
+                    <span class="left font_A">{{news.ptime}}</span>
+                    <!--评论-->
+                    <div class="right font_A">🀂 {{news.replyCount}}</div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </li>
+</ul>

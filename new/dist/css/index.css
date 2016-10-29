@@ -1,0 +1,19 @@
+html {
+    width: auto;
+    height: 2000px;
+}
+
+body {
+
+    background: cornsilk;
+}
+
+#all {
+
+    position: relative;
+    background: #ffffff;
+    margin: 0 auto;
+    min-width: 430px;
+
+}
+
